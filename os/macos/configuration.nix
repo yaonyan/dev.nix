@@ -18,7 +18,6 @@
   };
 
   services = {
-    nix-daemon.enable = true;
   };
 
   system = {

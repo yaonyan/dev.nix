@@ -66,7 +66,11 @@ rec {
         '';
 
         set-pac-proxy = ''
-          networksetup -setautoproxyurl "Wi-Fi" "http://127.0.0.1:7891/proxy.pac.js"
+          networksetup -setautoproxyurl "Wi-Fi" "http://127.0.0.1:7899/proxy.pac.js"
+        '';
+
+        clear-pac-proxy = ''
+          networksetup -setautoproxystate "Wi-Fi" off
         '';
       };
     };
@@ -112,8 +116,8 @@ rec {
     # overlays
     npm_whistle
 
-      # Rust 开发环境
-      rustup
+    # Rust 开发环境
+    rustup
   # rustc
   # cargo
   # rustfmt
@@ -129,7 +133,7 @@ rec {
   # # 编译工具
   # # gcc
   # llvmPackages.bintools
-
+    scrcpy
   ];
 
   home.shellAliases = {
@@ -138,7 +142,7 @@ rec {
     # cd = "z";
     cat = "bat";
     git = "${pkgs.git}/bin/git";
-    poweron = "w2 start && miniserve ~/.config/miniserve/hostdir --port 7891";
+    poweron = "w2 start && miniserve ~/.config/miniserve/hostdir --port 7899";
   };
 
   home.sessionPath = [

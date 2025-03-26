@@ -29,6 +29,7 @@
           unzip
           zip
           gnupg
+          uv
         ];
     };
 

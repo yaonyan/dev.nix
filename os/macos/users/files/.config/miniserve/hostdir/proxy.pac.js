@@ -13,9 +13,11 @@ const RULES = [
   { pattern: /(?:^|\.)x\.com$/, proxy: "clash" },
   { pattern: /(?:^|\.)reddit\.com$/, proxy: "clash" },
   { pattern: /(?:^|\.)deno\.com$/, proxy: "clash" },
+  { pattern: /(?:^|\.)google\.*/, proxy: "clash" },
   { pattern: /^glados\.network$/, proxy: "clash" },
   { pattern: /^bard\.google\.com$/, proxy: "clash" },
   { pattern: /^gemini\.google\.com$/, proxy: "clash" },
+  { pattern: /^generativelanguage\.googleapis\.com$/, proxy: "clash" },
   { pattern: /^devv\.ai$/, proxy: "clash" },
   { pattern: /^ynab\.com$/, proxy: "clash" },
   { pattern: /^npmjs\.com$/, proxy: "clash" },
@@ -24,6 +26,10 @@ const RULES = [
   { pattern: /(?:^|\.)microsoft\.com$/, proxy: "clash" },
   { pattern: /(?:^|\.)aka\.ms$/, proxy: "clash" },
   { pattern: /(?:^|\.)openrouter\.ai$/, proxy: "clash" },
+  { pattern: /(?:^|\.)workers\.dev$/, proxy: "clash" },
+  { pattern: /(?:^|\.)xdaforums\.com$/, proxy: "clash" },
+
+  { pattern: /(?:^|\.)passport\.woa\.com$/, proxy: "ioaPac" },
 
   { pattern: /(?:^|\.)tencent\.com$/, proxy: "whistle" },
   { pattern: /(?:^|\.)w?oa\.com$/, proxy: "whistle" },
@@ -35,11 +41,11 @@ const RULES = [
   { pattern: /^cloudcache\.tencent.*\./, proxy: "whistle" },
   { pattern: /^imgcache\.qq\./, proxy: "whistle" },
   { pattern: /(?:^|\.)tencentcos\.cn$/, proxy: "whistle" },
-  { pattern: /^passport\.woa\.com$/, proxy: "whistle" },
   { pattern: /(?:^|\.)figma\.com$/, proxy: "whistle" },
+  { pattern: /(?:^|\.)juanjuan\.work$/, proxy: "whistle" },
 ];
 
-const FALLBACK_PROFILE_NAME = "ioaPac";
+const FALLBACK_PROFILE_NAME = "clash";
 
 const proxyProfiles = {
   autoSwitch: (url, host, scheme) => {
