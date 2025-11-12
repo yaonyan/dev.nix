@@ -136,7 +136,7 @@ enablePkgs: pkgs:
   };
   colorschemes = enablePkgs {
     nord = {
-      
+      disable_background = true;
     };
   };
 }

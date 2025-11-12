@@ -22,6 +22,7 @@
 
   system = {
     stateVersion = 4;
+    primaryUser = "beet";
     defaults = {
       NSGlobalDomain = {
         AppleInterfaceStyle = "Dark";

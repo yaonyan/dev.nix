@@ -15,9 +15,11 @@ rec {
   programs = enablePkgs {
     direnv = {};
     git = {
-      userName = user.gitUsername or user.name;
-      userEmail = user.email;
-      extraConfig = {
+      settings = {
+        user = {
+          name = user.gitUsername or user.name;
+          email = user.email;
+        };
         init = {
           defaultBranch = "main";
         };
@@ -39,7 +41,9 @@ rec {
     };
     zoxide = { };
     go = {
-      goPath = "go";
+      env = {
+        GOPATH = "go";
+      };
     };
     fish = {
       interactiveShellInit = ''
@@ -49,7 +53,7 @@ rec {
 
 
       functions = {
-        os-rebuild = pkgs.lib.optionalString pkgs.stdenv.isLinux "sudo "
+        os-rebuild = pkgs.lib.optionalString pkgs.stdenv.isDarwin "sudo "
           +
           "${user.rebuildSysName}-rebuild switch --flake ${user.flakeRepo}#${user.rebuildDeviceName}";
 
