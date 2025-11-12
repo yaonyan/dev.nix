@@ -140,7 +140,7 @@ rec {
     g = "git";
     v = "nvim";
     # cd = "z";
-    cat = "bat";
+    # cat = "bat";
     git = "${pkgs.git}/bin/git";
     poweron = "w2 start && miniserve ~/.config/miniserve/hostdir --port 7899";
   };
@@ -166,7 +166,7 @@ rec {
 
     # VOLTA JS Launcher
     VOLTA_HOME = "$HOME/.volta";
-    NPM_CONFIG_REGISTRY = "https://mirrors.tencent.com/npm/";
+    # NPM_CONFIG_REGISTRY = "https://mirrors.tencent.com/npm/";
 
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH";
   };
