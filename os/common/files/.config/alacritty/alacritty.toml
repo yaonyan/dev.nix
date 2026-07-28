@@ -10,7 +10,7 @@ key = "Return"
 mods = "Command"
 
 [window]
-decorations = "transparent"
+decorations = "Full"
 opacity = 1
 
 [window.padding]
